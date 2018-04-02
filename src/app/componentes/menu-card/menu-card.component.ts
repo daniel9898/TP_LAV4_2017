@@ -7,12 +7,11 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class MenuCardComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute,
-    private router: Router) { }
-
+  constructor(private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
   }
+  
   Juego(tipo: string) {
     switch (tipo) {
       case 'Adivina':
@@ -27,6 +26,9 @@ export class MenuCardComponent implements OnInit {
       case 'AgilidadaMasListado':
           this.router.navigate(['/Juegos/AgilidadaMasListado']);
         break;
+      case 'Figthgif':
+        this.router.navigate(['/Juegos/Figthgif']);                                               
+      break;
     }
   }
 }

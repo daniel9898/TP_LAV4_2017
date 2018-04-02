@@ -1,0 +1,12 @@
+#faux-gif {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	margin: auto;
+	width: 700px;
+	height: 700px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	/*background-image: url('imagenes/final.gif');
+	background-image: url('clubes/ClubesGif.gif');*/
+}
