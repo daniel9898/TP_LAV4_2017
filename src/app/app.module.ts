@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { FigthGifComponent } from './componentes/figth-gif/figth-gif.component';
 
 import { TestMaterialComponent } from './componentes/test-material/test-material.component';
 
+import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';//test
 import { 
   MatButtonModule,

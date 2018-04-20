@@ -18,8 +18,8 @@ export class JuegoFigthGif extends Juego {
 		this.frames       = frames || null,
 		this.speed        = speed  || 100;
 		this.interval;
-        this.isPause      = false;
-        this.imagenActual = "";
+    this.isPause      = false;
+    this.imagenActual = "";
 		this.init();
     }
     
@@ -48,7 +48,7 @@ export class JuegoFigthGif extends Juego {
     public verificar(){
     
         if(this.imagenActual.indexOf('A') != -1  || this.imagenActual.indexOf('B') != -1 || this.imagenActual.indexOf('C') != -1){
-              alert("UFF GOLPE DURO!!");
+              //alert("UFF GOLPE DURO!!");
               return true;
         }else{
 
