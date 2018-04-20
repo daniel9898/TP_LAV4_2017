@@ -6,7 +6,12 @@ import { JuegoFigthGif } from '../../clases/juego-figth-gif';
   templateUrl: './figth-gif.component.html',
   styleUrls: ['./figth-gif.component.css']
 })
+
+
+
 export class FigthGifComponent implements OnInit {
+
+  
 
   private helperFigthGif : JuegoFigthGif;
   private frames : any = [
@@ -33,7 +38,8 @@ export class FigthGifComponent implements OnInit {
     '../../../assets/imagenes/gokuVSfree/21.gif'
   ];
 
-  constructor() { 
+  constructor() {
+  
   }
 
   

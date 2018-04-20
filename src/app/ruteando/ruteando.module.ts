@@ -23,7 +23,6 @@ import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { FigthGifComponent } from '../componentes/figth-gif/figth-gif.component';
 
-
 // declaro donde quiero que se dirija
 const MiRuteo = [
 {path: 'Jugadores' , component: JugadoresListadoComponent},
@@ -45,6 +44,7 @@ const MiRuteo = [
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'Figthgif' , component: FigthGifComponent}]
 },
+
 {path: '**' , component: ErrorComponent},
 {path: 'error' , component: ErrorComponent}];
 
