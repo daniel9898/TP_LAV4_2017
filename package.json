@@ -31,11 +31,8 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
     "ngx-bootstrap": "^1.9.3",
-<<<<<<< HEAD
     "node-sass": "^4.8.3",
-=======
     "popper.js": "^1.14.3",
->>>>>>> 611ab1ab2e6f8efd55dc6772232c085aeee886e8
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

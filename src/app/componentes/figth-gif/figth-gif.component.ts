@@ -31,11 +31,6 @@ import {
   ]
 })
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 611ab1ab2e6f8efd55dc6772232c085aeee886e8
 export class FigthGifComponent implements OnInit {
 
   
@@ -65,10 +60,7 @@ export class FigthGifComponent implements OnInit {
     '../../../assets/imagenes/gokuVSfree/21.gif'
   ];
 
-<<<<<<< HEAD
-  constructor() {
   
-=======
   private show : boolean; 
   
   constructor() { 
@@ -82,7 +74,7 @@ export class FigthGifComponent implements OnInit {
 
   get stateName(){
     return this.show ? 'show' : 'hide';
->>>>>>> 611ab1ab2e6f8efd55dc6772232c085aeee886e8
+
   }
 
   
