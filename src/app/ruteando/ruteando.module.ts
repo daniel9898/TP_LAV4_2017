@@ -22,6 +22,10 @@ import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/lista
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { FigthGifComponent } from '../componentes/figth-gif/figth-gif.component';
+<<<<<<< HEAD
+=======
+import { TestMaterialComponent } from '../componentes/test-material/test-material.component';
+>>>>>>> 611ab1ab2e6f8efd55dc6772232c085aeee886e8
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -34,6 +38,8 @@ const MiRuteo = [
 {path: 'Principal' , component: PrincipalComponent},
 {path: 'Listado' , component: ListadoComponent},
 {path: 'Paises' , component: ListadoDePaisesComponent},
+{path: 'material' , component: TestMaterialComponent},//TEST
+
 
 { path: 'Juegos' , component: JuegosComponent ,
   children:

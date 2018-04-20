@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -41,6 +41,19 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { FigthGifComponent } from './componentes/figth-gif/figth-gif.component';
 
+import { TestMaterialComponent } from './componentes/test-material/test-material.component';
+
+import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';//test
+import { 
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule 
+} from '@angular/material';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,13 +79,20 @@ import { FigthGifComponent } from './componentes/figth-gif/figth-gif.component';
     JugadoresListadoComponent,
     InputJugadoresComponent,
     SexoPipe,
-    FigthGifComponent
+    FigthGifComponent,
+    TestMaterialComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
     HttpModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
