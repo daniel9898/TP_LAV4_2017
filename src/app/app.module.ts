@@ -53,6 +53,17 @@ import {
   MatCardModule 
 } from '@angular/material';
 
+import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { TestDirective } from './directivas/test.directive';
+
+export class MyHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+      // override hammerjs default configuration
+      'swipe': { direction: Hammer.DIRECTION_ALL  }
+  }
+}
+
 
 @NgModule({
   declarations: [
@@ -80,7 +91,8 @@ import {
     InputJugadoresComponent,
     SexoPipe,
     FigthGifComponent,
-    TestMaterialComponent
+    TestMaterialComponent,
+    TestDirective
   ],
   imports: [
     BrowserModule,
@@ -100,7 +112,15 @@ import {
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [ JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService],
+  providers: [ JuegoServiceService,
+               MiHttpService,
+               PaisesService,
+               ArchivosJugadoresService,
+               JugadoresService,
+               {
+                  provide: HAMMER_GESTURE_CONFIG, 
+                  useClass: MyHammerConfig 
+               }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body >
-    <div id="faux-gif" [@popOverState]="stateName"></div>
-   <!-- <div >
-    	<p><img src="assets/imagenes/quiensoy.jpg" width="50px"> </p>
-    	<p>Hola soy una animacion !!!</p>
-    </div>
-    <button (click)="cambiar()">Cambiar</button>-->
-</body>
-</html>
+<mat-card appTest id="faux-gif"
+          [@popOverState]="stateName"
+
+          (tap)="startAnimation('swing')"
+          (doubleTap)="startAnimation('wobble')"
+          (tripleTap)="startAnimation('jello')"
+          [@cardAnimator]="animationState" 
+          (@cardAnimator.done)="resetAnimationState()"
+          (swipeleft)="startAnimation('slideOutLeft')"
+          (swiperight)="startAnimation('zoomOutRight')"
+          (swipeup)="startAnimation('rotateOutUpRight')"
+          (swipedown)="startAnimation('flipOutY')"
+>
+
+</mat-card>

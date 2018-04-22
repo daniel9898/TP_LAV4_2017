@@ -18,15 +18,14 @@ export class JuegoFigthGif extends Juego {
 		this.frames       = frames || null,
 		this.speed        = speed  || 100;
 		this.interval;
-    this.isPause      = false;
-    this.imagenActual = "";
+        this.isPause      = false;
+        this.imagenActual = "";
 		this.init();
     }
     
     init(){
-        // set the first one to the first image
-		console.log(this.frames[0])
-		this.domElement.style.backgroundImage = "url(" + this.frames[0] + ")";
+            // set the first one to the first image
+    		this.domElement.style.backgroundImage = "url(" + this.frames[0] + ")";
     }
 
     pause(){
@@ -37,30 +36,25 @@ export class JuegoFigthGif extends Juego {
     resume(){
         var that = this;
 
-        that.interval = setInterval(function(){
-            console.log(that.frames[that.currentFrame])
-            console.log(that.frames.length);
+        that.interval = setInterval(() => {
             that.currentFrame < that.frames.length - 1 ? that.currentFrame++ : that.currentFrame = 0;
             that.domElement.style.backgroundImage = "url(" + that.frames[that.currentFrame] + ")";
+      
+            this.imagenActual = that.frames[that.currentFrame];
+            if(this.verificar()){
+                document.body.style.backgroundColor = "green";
+            }else{
+                document.body.style.backgroundColor = "#212529"; 
+            }
+
         }, this.speed);
     }
 
-    public verificar(){
-    
-        if(this.imagenActual.indexOf('A') != -1  || this.imagenActual.indexOf('B') != -1 || this.imagenActual.indexOf('C') != -1){
-              //alert("UFF GOLPE DURO!!");
-              return true;
-        }else{
+  
 
-          if(this.isPause){
-             this.resume();
-             this.isPause = false;
-          }
-          else{
-             this.pause();
-             this.isPause = true;
-          } 
-        }
-        return false;
+    public verificar(){
+      
+        return (this.imagenActual.indexOf('A') != -1  || this.imagenActual.indexOf('B')
+                 != -1 || this.imagenActual.indexOf('C') != -1);
     }
 }
