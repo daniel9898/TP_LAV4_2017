@@ -24,6 +24,7 @@ import { JugadoresListadoComponent } from '../componentes/jugadores-listado/juga
 import { FigthGifComponent } from '../componentes/figth-gif/figth-gif.component';
 import { TestMaterialComponent } from '../componentes/test-material/test-material.component';
 
+
 // declaro donde quiero que se dirija
 const MiRuteo = [
 {path: 'Jugadores' , component: JugadoresListadoComponent},
@@ -47,6 +48,7 @@ const MiRuteo = [
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'Figthgif' , component: FigthGifComponent}]
 },
+
 {path: '**' , component: ErrorComponent},
 {path: 'error' , component: ErrorComponent}];
 
