@@ -35,18 +35,14 @@ export class JuegoFigthGif extends Juego {
 
     resume(){
         var that = this;
+        this.isPause = false;
 
         that.interval = setInterval(() => {
             that.currentFrame < that.frames.length - 1 ? that.currentFrame++ : that.currentFrame = 0;
-            that.domElement.style.backgroundImage = "url(" + that.frames[that.currentFrame] + ")";
-      
             this.imagenActual = that.frames[that.currentFrame];
-            if(this.verificar()){
-                document.body.style.backgroundColor = "green";
-            }else{
-                document.body.style.backgroundColor = "#212529"; 
-            }
-
+            document.body.style.backgroundColor  = (this.verificar()) ? "#006400" : "#212529";
+            that.domElement.style.backgroundImage = "url(" + that.frames[that.currentFrame] + ")";
+    
         }, this.speed);
     }
 

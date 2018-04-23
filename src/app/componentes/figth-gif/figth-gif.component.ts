@@ -84,7 +84,7 @@ export class FigthGifComponent implements OnInit {
   ngOnInit() {
 
     var div = document.querySelector('#faux-gif');
-    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 60);
+    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 80);
     this.helperFigthGif.resume();
 
     div.addEventListener('click',this.capturarImagenActual.bind(this));
@@ -106,7 +106,11 @@ export class FigthGifComponent implements OnInit {
     this.show = this.helperFigthGif.verificar();
 
     if(this.show){
-       setTimeout(() =>{ this.show = false}, 2500);
+       this.helperFigthGif.pause();
+       setTimeout(() =>{ 
+          this.show = false
+          this.helperFigthGif.resume();
+        }, 2500);
     }else{
       document.body.style.backgroundColor = "red";
     }
