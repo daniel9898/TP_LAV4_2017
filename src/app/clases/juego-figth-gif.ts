@@ -40,7 +40,7 @@ export class JuegoFigthGif extends Juego {
         that.interval = setInterval(() => {
             that.currentFrame < that.frames.length - 1 ? that.currentFrame++ : that.currentFrame = 0;
             this.imagenActual = that.frames[that.currentFrame];
-            document.body.style.backgroundColor  = (this.verificar()) ? "#006400" : "#212529";
+            //document.body.style.backgroundColor  = (this.verificar()) ? "#006400" : "#212529";
             that.domElement.style.backgroundImage = "url(" + that.frames[that.currentFrame] + ")";
     
         }, this.speed);

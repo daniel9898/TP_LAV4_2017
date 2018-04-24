@@ -29,7 +29,7 @@ import * as kf from './keyframes';
 
     trigger('popOverState',[
         state('show',style({
-           opacity: 0,
+           opacity: 0.01,
            height: '600px',
            width: '300px'
         })),
@@ -74,6 +74,8 @@ export class FigthGifComponent implements OnInit {
 
   private show : boolean; 
   private animationState : string;
+  colors = ['grey', 'green', 'blue', 'orange', 'yellow','#00FFFF','#DC143C','#00CED1'];
+  interval = null;
   
   
   constructor() { 
@@ -84,7 +86,7 @@ export class FigthGifComponent implements OnInit {
   ngOnInit() {
 
     var div = document.querySelector('#faux-gif');
-    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 80);
+    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 100);
     this.helperFigthGif.resume();
 
     div.addEventListener('click',this.capturarImagenActual.bind(this));
@@ -106,17 +108,21 @@ export class FigthGifComponent implements OnInit {
     this.show = this.helperFigthGif.verificar();
 
     if(this.show){
-       this.helperFigthGif.pause();
-       setTimeout(() =>{ 
+        this.randomColorBack();
+        this.helperFigthGif.pause();
+       
+        setTimeout(() =>{ 
           this.show = false
           this.helperFigthGif.resume();
         }, 2500);
     }else{
-      document.body.style.backgroundColor = "red";
-    }
-
+        document.body.style.backgroundColor = "red";
+        setTimeout(() =>{ 
+          document.body.style.backgroundColor = "#212529";
+        }, 200);
+      
        
-
+    }
   }
 
   startAnimation(state) {
@@ -128,6 +134,22 @@ export class FigthGifComponent implements OnInit {
 
   resetAnimationState() {
     this.animationState = '';
+  }
+
+  randomColorBack(){
+    
+    var that = this;
+    let currentColor = 0
+
+    this.interval = setInterval(() => {
+       currentColor  < that.colors.length - 1 ? currentColor++ : currentColor = 0;
+       document.body.style.backgroundColor = this.colors[currentColor];
+    },100);
+    
+    /*setTimeout(()=>{
+      clearInterval(that.interval);
+      document.body.style.backgroundColor = "#212529";
+    })*/
   }
 
 }
