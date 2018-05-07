@@ -11,12 +11,14 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class MiHttpService {
 
+  private url : string = 'https://restcountries.eu/rest/v2/';
+
   constructor( public http: Http ) { }
 
-  public httpGetP ( url: string)
+  public httpGetP ( endPoint: string)
   {
     return this.http
-    .get( url )
+    .get( this.url + endPoint)
     .toPromise()
     .then( this.extractData )
     .catch( this.handleError );

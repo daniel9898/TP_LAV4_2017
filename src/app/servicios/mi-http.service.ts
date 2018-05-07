@@ -9,13 +9,15 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class MiHttpService {
+
+  private url : string = "https://restcountries.eu/rest/v2/";
   
   constructor(public http:Http) { }
   
-  public httpGetPromise(url: string, objeto:any){
+  public httpGetPromise(endPoint: string, objeto:any){
 
     return this.http
-    .get(url)
+    .get(this.url + endPoint)
     .toPromise()
     .then(this.extraerDatos)
     .catch(this.handleError);

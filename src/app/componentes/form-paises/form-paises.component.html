@@ -1,0 +1,12 @@
+ <div class="container" >
+  <div class="jumbotron" style="padding:50px;">
+      <div class="container" style="background-color:#f1f1f1">
+		<button type="button" class="btn btn-default" (click)="traerTodos()">Todos</button>
+		<button type="button" class="btn btn-primary" (click)="traerSoloNombres()">Por Nombre</button>
+		<button type="button" class="btn btn-success" (click)="traerArgentina()">_Arg</button>
+      </div>
+      <div class="container">
+      	<app-listado-de-paises [listadoDePaises] = "listado"></app-listado-de-paises>
+      </div>
+  </div>
+</div>

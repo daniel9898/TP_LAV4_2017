@@ -56,6 +56,7 @@ import {
 import * as Hammer from 'hammerjs';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { TestDirective } from './directivas/test.directive';
+import { FormPaisesComponent } from './componentes/form-paises/form-paises.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -92,7 +93,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     SexoPipe,
     FigthGifComponent,
     TestMaterialComponent,
-    TestDirective
+    TestDirective,
+    FormPaisesComponent
   ],
   imports: [
     BrowserModule,

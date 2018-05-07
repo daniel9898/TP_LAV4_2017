@@ -6,8 +6,8 @@ export class PaisesService {
   constructor(public miHttp: MiHttpService ) { }
 
 
-  public listar():Promise<Array<any>> {
-       return   this.miHttp.httpGetP("https://restcountries.eu/rest/v2/all")
+  public listarTodos(endpoint : string):Promise<Array<any>> {
+       return   this.miHttp.httpGetP(endpoint)
           .then( data => {
             console.log( data );
             return data;

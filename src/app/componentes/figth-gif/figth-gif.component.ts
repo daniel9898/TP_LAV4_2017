@@ -74,8 +74,8 @@ export class FigthGifComponent implements OnInit {
 
   private show : boolean; 
   private animationState : string;
-  colors = ['grey', 'green', 'blue', 'orange', 'yellow','#00FFFF','#DC143C','#00CED1'];
-  interval = null;
+  private colors = ['grey', 'green', 'blue', 'orange', 'yellow','#00FFFF','#DC143C','#00CED1'];
+  private interval = null;
   
   
   constructor() { 
@@ -86,15 +86,11 @@ export class FigthGifComponent implements OnInit {
   ngOnInit() {
 
     var div = document.querySelector('#faux-gif');
-    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 100);
+    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 80);
     this.helperFigthGif.resume();
 
     div.addEventListener('click',this.capturarImagenActual.bind(this));
 
-  }
-
-  cambiar(){
-    this.show = ! this.show;
   }
 
   get stateName(){
@@ -108,27 +104,30 @@ export class FigthGifComponent implements OnInit {
     this.show = this.helperFigthGif.verificar();
 
     if(this.show){
+
         this.randomColorBack();
         this.helperFigthGif.pause();
        
         setTimeout(() =>{ 
           this.show = false
           this.helperFigthGif.resume();
+          clearInterval(this.interval);
+          document.body.style.backgroundColor = "#212529";
         }, 2500);
+
     }else{
+
         document.body.style.backgroundColor = "red";
         setTimeout(() =>{ 
           document.body.style.backgroundColor = "#212529";
         }, 200);
-      
-       
     }
   }
 
-  startAnimation(state) {
-    console.log(state)
+  startAnimation(keyFrameName) {
+    console.log(keyFrameName)
     if (!this.animationState) {
-      this.animationState = state;
+      this.animationState = keyFrameName;
     }
   }
 
@@ -137,19 +136,13 @@ export class FigthGifComponent implements OnInit {
   }
 
   randomColorBack(){
-    
-    var that = this;
+   
     let currentColor = 0
 
     this.interval = setInterval(() => {
-       currentColor  < that.colors.length - 1 ? currentColor++ : currentColor = 0;
+       currentColor  < this.colors.length - 1 ? currentColor++ : currentColor = 0;
        document.body.style.backgroundColor = this.colors[currentColor];
     },100);
-    
-    /*setTimeout(()=>{
-      clearInterval(that.interval);
-      document.body.style.backgroundColor = "#212529";
-    })*/
   }
 
 }

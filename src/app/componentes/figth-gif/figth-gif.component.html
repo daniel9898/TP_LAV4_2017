@@ -5,6 +5,7 @@
           (tap)="startAnimation('swing')"
           (doubleTap)="startAnimation('wobble')"
           (tripleTap)="startAnimation('jello')"
+          
           [@cardAnimator]="animationState" 
           (@cardAnimator.done)="resetAnimationState()"
           (swipeleft)="startAnimation('slideOutLeft')"

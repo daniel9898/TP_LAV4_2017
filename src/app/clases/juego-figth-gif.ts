@@ -34,14 +34,14 @@ export class JuegoFigthGif extends Juego {
     }
 
     resume(){
-        var that = this;
+       
         this.isPause = false;
 
-        that.interval = setInterval(() => {
-            that.currentFrame < that.frames.length - 1 ? that.currentFrame++ : that.currentFrame = 0;
-            this.imagenActual = that.frames[that.currentFrame];
+        this.interval = setInterval(() => {
+            this.currentFrame < this.frames.length - 1 ? this.currentFrame++ : this.currentFrame = 0;
+            this.imagenActual = this.frames[this.currentFrame];
             //document.body.style.backgroundColor  = (this.verificar()) ? "#006400" : "#212529";
-            that.domElement.style.backgroundImage = "url(" + that.frames[that.currentFrame] + ")";
+            this.domElement.style.backgroundImage = "url(" + this.frames[this.currentFrame] + ")";
     
         }, this.speed);
     }

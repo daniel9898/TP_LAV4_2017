@@ -24,6 +24,8 @@ import { JugadoresListadoComponent } from '../componentes/jugadores-listado/juga
 import { FigthGifComponent } from '../componentes/figth-gif/figth-gif.component';
 import { TestMaterialComponent } from '../componentes/test-material/test-material.component';
 
+import { FormPaisesComponent } from '../componentes/form-paises/form-paises.component';
+
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -35,7 +37,7 @@ const MiRuteo = [
 {path: 'Registro' , component: RegistroComponent},
 {path: 'Principal' , component: PrincipalComponent},
 {path: 'Listado' , component: ListadoComponent},
-{path: 'Paises' , component: ListadoDePaisesComponent},
+{path: 'Paises' , component: FormPaisesComponent},
 {path: 'material' , component: TestMaterialComponent},//TEST
 
 
