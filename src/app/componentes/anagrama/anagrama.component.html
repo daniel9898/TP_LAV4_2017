@@ -1,3 +1,13 @@
-<p>
-  anagrama works!
-</p>
+<h3>¿ Alguna Idea ?</h3>
+<p>jalad reno</p>
+<div class="container">
+  <input type="text" [(ngModel)]="palabraUser" class="box effect6" placeholder="Aqui tu palabra ...">
+  <button (click)="tomarPalabra()">Probar suerte !</button>
+  <div>
+	<aside [ngClass]="{'warning': !this.result , 'success': this.result} "  
+	       *ngIf="mostrarInforme" class="box effect5" id="informe">{{ textoResultado }}</aside>
+  </div>
+</div>
+
+
+

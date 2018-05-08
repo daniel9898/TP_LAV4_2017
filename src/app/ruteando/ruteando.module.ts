@@ -11,8 +11,7 @@ import { AgilidadAritmeticaComponent } from '../componentes/agilidad-aritmetica/
 import { MenuComponent } from '../componentes/menu/menu.component';
 import { AdivinaMasListadoComponent } from '../componentes/adivina-mas-listado/adivina-mas-listado.component';
 import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
-import { ListadoComponent } from'../componentes/listado/listado.component'
-import { ListadosComponent } from '../componentes/listados/listados.component';
+import { ListadoComponent } from'../componentes/listado/listado.component';
 import { JuegosComponent } from '../componentes/juegos/juegos.component';
 import { RegistroComponent } from '../componentes/registro/registro.component';
 import { MenuCardComponent } from '../componentes/menu-card/menu-card.component';
@@ -23,8 +22,10 @@ import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { FigthGifComponent } from '../componentes/figth-gif/figth-gif.component';
 import { TestMaterialComponent } from '../componentes/test-material/test-material.component';
-
+import { TatetiComponent } from '../componentes/tateti/tateti.component';
+import { PiedraPapelComponent } from '../componentes/piedra-papel/piedra-papel.component';
 import { FormPaisesComponent } from '../componentes/form-paises/form-paises.component';
+import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 
 
 // declaro donde quiero que se dirija
@@ -48,7 +49,10 @@ const MiRuteo = [
       {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-      {path: 'Figthgif' , component: FigthGifComponent}]
+      {path: 'Figthgif' , component: FigthGifComponent},
+      {path: 'piedrapapel' , component: PiedraPapelComponent},
+      {path: 'tateti' , component: TatetiComponent},
+      {path: 'anagrama' , component: AnagramaComponent}]
 },
 
 {path: '**' , component: ErrorComponent},

@@ -76,6 +76,7 @@ export class FigthGifComponent implements OnInit {
   private animationState : string;
   private colors = ['grey', 'green', 'blue', 'orange', 'yellow','#00FFFF','#DC143C','#00CED1'];
   private interval = null;
+  private div : any;
   
   
   constructor() { 
@@ -85,11 +86,11 @@ export class FigthGifComponent implements OnInit {
 
   ngOnInit() {
 
-    var div = document.querySelector('#faux-gif');
-    this.helperFigthGif = new JuegoFigthGif(div, this.frames, 80);
+    this.div = document.querySelector('#faux-gif');
+    this.helperFigthGif = new JuegoFigthGif(this.div, this.frames, 80);
     this.helperFigthGif.resume();
 
-    div.addEventListener('click',this.capturarImagenActual.bind(this));
+    this.div.addEventListener('click',this.capturarImagenActual.bind(this));
 
   }
 
@@ -104,6 +105,7 @@ export class FigthGifComponent implements OnInit {
     this.show = this.helperFigthGif.verificar();
 
     if(this.show){
+        //event.target.removeEventListener(event.type,this.capturarImagenActual);
 
         this.randomColorBack();
         this.helperFigthGif.pause();
@@ -112,14 +114,17 @@ export class FigthGifComponent implements OnInit {
           this.show = false
           this.helperFigthGif.resume();
           clearInterval(this.interval);
-          document.body.style.backgroundColor = "#212529";
+          document.body.style.backgroundColor = "white";
         }, 2500);
+
+        //this.div.addEventListener('click',this.capturarImagenActual.bind(this));
+
 
     }else{
 
         document.body.style.backgroundColor = "red";
         setTimeout(() =>{ 
-          document.body.style.backgroundColor = "#212529";
+          document.body.style.backgroundColor = "white";
         }, 200);
     }
   }

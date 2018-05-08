@@ -29,6 +29,15 @@ export class MenuCardComponent implements OnInit {
       case 'Figthgif':
         this.router.navigate(['/Juegos/Figthgif']);                                               
       break;
+      case 'anagrama':
+          this.router.navigate(['/Juegos/anagrama']);
+        break;
+      case 'tateti':
+          this.router.navigate(['/Juegos/tateti']);
+        break;
+      case 'piedrapapel':
+        this.router.navigate(['/Juegos/piedrapapel']);
+        break;  
     }
   }
 }

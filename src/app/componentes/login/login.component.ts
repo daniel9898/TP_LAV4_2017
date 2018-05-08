@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   private subscription: Subscription;
   usuario = '';
   clave= '';
+  usuarios= [];
   progreso: number;
   progresoMensaje="esperando..."; 
   logeando=true;
@@ -32,10 +33,17 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
-      this.router.navigate(['/Principal']);
-    }
+
+    this.usuarios = JSON.parse(localStorage.getItem('usuarios'))
+    this.usuarios.forEach((usr)=>{
+        if(this.usuario == usr.nombre && this.clave == usr.clave){
+           localStorage.setItem('usr',JSON.stringify(usr));
+           this.router.navigate(['/Principal']);
+        }
+           
+    })
   }
+
   MoverBarraDeProgreso() {
     
     this.logeando=false;

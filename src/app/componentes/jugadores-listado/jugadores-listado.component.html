@@ -1,11 +1,20 @@
-<ul class="nav nav-pills nav-justified">
-  <li class="active"><a routerLink="/Principal">Ir a inicio</a></li>
-  <li><a (click)="TraerTodos()">Todos los jugadores</a></li>
-  <li><a (click)="TraerGanadores()">Los ganadores</a></li>
-  <li><a (click)="TraerPerdedores()">Los perdedores</a></li>
-</ul>
 
-
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/Principal">Ir a inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="TraerTodos()">Todos los jugadores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="TraerGanadores()">Los ganadores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="TraerPerdedores()">Los perdedores</a>
+    </li>
+  </ul>
+</nav>
 
 <table class="table table-condensed">
   <thead>

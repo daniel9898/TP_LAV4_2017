@@ -27,7 +27,6 @@ import { RuteandoModule } from './ruteando/ruteando.module';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { JugadoresListadoComponent } from './componentes/jugadores-listado/jugadores-listado.component';
 import { JuegoServiceService } from './servicios/juego-service.service';
-import { ListadosComponent } from './componentes/listados/listados.component';
 import { JuegosComponent } from './componentes/juegos/juegos.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { MenuCardComponent } from './componentes/menu-card/menu-card.component';
@@ -40,7 +39,6 @@ import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { FigthGifComponent } from './componentes/figth-gif/figth-gif.component';
-
 import { TestMaterialComponent } from './componentes/test-material/test-material.component';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -57,6 +55,8 @@ import * as Hammer from 'hammerjs';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { TestDirective } from './directivas/test.directive';
 import { FormPaisesComponent } from './componentes/form-paises/form-paises.component';
+import { PiedraPapelComponent } from './componentes/piedra-papel/piedra-papel.component';
+import { TatetiComponent } from './componentes/tateti/tateti.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -79,7 +79,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AdivinaMasListadoComponent,
     AgilidadMasListadoComponent,
     ListadoComponent,
-    ListadosComponent,
     JuegosComponent,
     RegistroComponent,
     MenuCardComponent,
@@ -94,7 +93,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     FigthGifComponent,
     TestMaterialComponent,
     TestDirective,
-    FormPaisesComponent
+    FormPaisesComponent,
+    PiedraPapelComponent,
+    TatetiComponent
   ],
   imports: [
     BrowserModule,

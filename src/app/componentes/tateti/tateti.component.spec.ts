@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListadosComponent } from './listados.component';
+import { TatetiComponent } from './tateti.component';
 
-describe('ListadosComponent', () => {
-  let component: ListadosComponent;
-  let fixture: ComponentFixture<ListadosComponent>;
+describe('TatetiComponent', () => {
+  let component: TatetiComponent;
+  let fixture: ComponentFixture<TatetiComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListadosComponent ]
+      declarations: [ TatetiComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListadosComponent);
+    fixture = TestBed.createComponent(TatetiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

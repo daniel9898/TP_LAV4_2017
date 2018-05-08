@@ -22,36 +22,193 @@ img {
 }
 
 
-.button{
-    margin-left: 1px;
-    display: inline-block;
-    width: 90%;
-    padding: 5px 15px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
 
-    border: none;
-    outline: 0;
- 
-    padding: 8px;
-    color: white;
-   /* background-color: #000;*/
+
+
+/*REDES SOCIALES*/
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left:0 !important;
+    padding: 0;
+}
+ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+    background-color: #F56505;
+}
+.social-network a.icoFacebook:hover {
+    background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+    background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+    background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+    background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+    background-color:#007bb7;
+}
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+    color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+    color:#44BCDD;
+}
+
+.social-circle li a {
+    display:inline-block;
+    position:relative;
+    margin:0 auto 0 auto;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    text-align:center;
+    width: 50px;
+    height: 50px;
+    font-size:20px;
+}
+.social-circle li i {
+    margin:0;
+    line-height:50px;
     text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.social-circle i {
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+a {
+ background-color: #D3D3D3;   
+}
+
+/************BOTON JUGAR***************/
+
+.button {
+    font-family: Impact;
+    height: 120px;
+    width: 200px;
     cursor: pointer;
+    margin: 50px auto;
+}
+.button .outer {
+    position: relative;
     width: 100%;
-  }
-  
-  .button:hover {background-color: #3e8e41}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+    height: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.65);
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+    -webkit-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+    -moz-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+    -webkit-transform: perspective(500px) rotateX(35deg);
+    -moz-transform: perspective(500px) rotateX(35deg);
+}
+.button .outer .height {
+    position: relative;
+    height: 100%;
+    margin-top: -15px;
+    padding-bottom: 15px;
+    background: #39a02d;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
+    -webkit-box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
+    -moz-box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+}       
+.button:hover .outer .height {
+    margin-top: -10px;
+    padding-bottom: 10px;
+    background: #3aaf2d;
+    box-shadow: rgba(0,0,0,0.25) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 6px;
+    -webkit-box-shadow: rgba(0,0,0,0.25) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 6px;
+    -moz-box-shadow: rgba( 0,0,0,0.25) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 6px;
+}
+.button:active .outer .height {
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+.button .outer .height .inner {
+    line-height: 2.8em;
+    font-size: 30px;
+    letter-spacing: .05em;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    text-shadow: #8aff7b 0px 0px 1px;
+    background: #44d135;
+    background: -moz-linear-gradient(top, #80ec75 0%, #43d034 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80ec75), color-stop(100%,#43d034)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #80ec75 0%,#43d034 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #80ec75 0%,#43d034 100%); /* W3C */
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    box-shadow: inset rgba(255,255,255,0.85) 0px 0px 1px;
+    -webkit-box-shadow: inset rgba(255,255,255,0.85) 0px 0px 1px;
+    -moz-box-shadow: inset rgba(255,255,255,0.85) 0px 0px 1px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+}
+.button:hover .outer .height .inner{
+    text-shadow: #99f48d 0px 0px 1px;
+    background: #43d034; /* Old browsers */
+    background: -moz-linear-gradient(top, #43d034 0%, #67e45c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#43d034), color-stop(100%,#67e45c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #43d034 0%,#67e45c 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #43d034 0%,#67e45c 100%); /* W3C */
+}
+.button:active .outer .height .inner{
+    text-shadow: #319926 0px 1px 0px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    box-shadow: inset rgba(0,0,0,0.9) 0px 0px 8px;
+    -webkit-box-shadow: inset rgba(0,0,0,0.9) 0px 0px 8px;
+    -moz-box-shadow: inset rgba(0,0,0,0.9) 0px 0px 8px;
+    background: #1d7d12; /* Old browsers */
+    background: -moz-linear-gradient(top, #1d7d12 0%, #4fd342 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d7d12), color-stop(100%,#4fd342)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1d7d12 0%,#4fd342 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #1d7d12 0%,#4fd342 100%); /* W3C */
+}
+
+/******/
+
+
+
